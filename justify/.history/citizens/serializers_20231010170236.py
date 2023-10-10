@@ -4,9 +4,9 @@ from .models import Citizen, Province
 class CitizenSerializer(serializers.ModelSerializer):
   class Meta:
     model = Citizen
-    fields = '__all__'
+    fields = ('names', 'last_names', 'email', 'dni', 'cuil', 'province', 'location', 'address', 'created_at')
 
 class ProvinceSerializer(serializers.ModelSerializer):
   class Meta:
     model = Province
-    fields = '__all__'
+    fields = ('province')
