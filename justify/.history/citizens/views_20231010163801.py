@@ -2,10 +2,10 @@ from rest_framework import generics
 from .models import *
 from .serializers import CitizenSerializer
 
-class CitizenList(generics.ListCreateAPIView):
+class ProductList(generic.listCreateAPIView):
   queryset = Citizen.objects.all()
   serializer_class = CitizenSerializer
 
-class CitizenDetail(generics.RetrieveUpdateDestroyAPIView):
+class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Citizen.objects.all()
     serializer_class = CitizenSerializer

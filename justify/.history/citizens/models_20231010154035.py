@@ -24,7 +24,7 @@ class Citizen(models.Model):
   created_at = models.DateTimeField(auto_now=True, verbose_name='Fecha de Registro')
 
   def __str__(self):
-    return self.names + ' ' + self.last_names
+    return self.names + {''} + self.last_names
 
   class Meta:
     verbose_name = 'Ciudadano'

@@ -3,10 +3,10 @@ from django.db import models
 class Province(models.Model):
   province = models.CharField(max_length=50, verbose_name='Provincia')
 
-  def __str__(self):
-    return self.province
+def __str__(self):
+  return self.province
 
-  class Meta:
+class Meta:
     verbose_name = 'Provincia'
     verbose_name_plural = 'Provincias'
     db_table = 'provincia'
@@ -23,11 +23,11 @@ class Citizen(models.Model):
   address = models.CharField(max_length=300, verbose_name='Domicilio')
   created_at = models.DateTimeField(auto_now=True, verbose_name='Fecha de Registro')
 
-  def __str__(self):
-    return self.names + ' ' + self.last_names
+def __str__(self):
+  return self.names
 
-  class Meta:
-    verbose_name = 'Ciudadano'
-    verbose_name_plural = 'Ciudadanos'
-    db_table = 'ciudadano'
-    ordering = ['names']
+class Meta:
+  verbose_name = 'Ciudadano'
+  verbose_name_plural = 'Ciudadanos'
+  db_table = 'ciudadano'
+  ordering = ['names']
